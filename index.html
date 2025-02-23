@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Server</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="cyber-nav">
+        <div class="nav-brand">
+            <img src="logo.png" class="hologram-effect" alt="Server Logo" width="60">
+            <h1 class="glitch">Speed Server</h1>
+        </div>
+        <div class="nav-links">
+            <!-- أزرار الترجمة -->
+            <div class="language-switcher">
+                <button class="lang-btn" data-lang="ar">العربية</button>
+                <button class="lang-btn" data-lang="en">English</button>
+                <button class="lang-btn" data-lang="ru">Русский</button>
+            </div>
+            <!-- أزرار التنقل -->
+            <a href="#stats" class="nav-btn active" data-i18n="stats"></a>
+            <a href="#map" class="nav-btn" data-i18n="map"></a>
+            <a href="#ranks" class="nav-btn" data-i18n="ranks"></a>
+        </div>
+    </nav>
+
+    <!-- قسم الإحصائيات -->
+    <section class="server-stats" id="stats">
+        <div class="stats-container">
+            <!-- بطاقة اللاعبين -->
+            <div class="stat-card cyber-card">
+                <div class="stat-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 data-i18n="players_now"></h3>
+                <div class="stat-value" id="players-online">Error</div>
+                <div class="stat-subtext" id="players-max">/ </div>
+            </div>
+
+            <!-- بطاقة الأداء -->
+            <div class="stat-card cyber-card">
+                <div class="stat-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h3 data-i18n="server_performance"></h3>
+                <div class="performance-bar">
+                    <div class="fill" id="performance-fill"></div>
+                </div>
+                <div class="stat-subtext" id="performance-text">Error</div>
+            </div>
+
+            <!-- بطاقة الإصدار -->
+            <div class="stat-card cyber-card">
+                <div class="stat-icon">
+                    <i class="fas fa-code-branch"></i>
+                </div>
+                <h3 data-i18n="version"></h3>
+                <div class="stat-value" id="server-version">Error</div>
+                <div class="stat-subtext" id="server-protocol">Error</div>
+            </div>
+
+            <!-- بطاقة وقت التشغيل -->
+            <div class="stat-card cyber-card">
+                <div class="stat-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3 data-i18n="uptime"></h3>
+                <div class="stat-value" id="server-uptime">Error</div>
+                <div class="stat-subtext" id="server-status">غير متصل</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الخريطة -->
+    <section class="map-section" id="map">
+        <div class="map-container cyber-card">
+            <h2 class="section-title"><i class="fas fa-globe-asia"></i><span data-i18n="map"></span></h2>
+            <iframe 
+                src="https://shorturl.at/UlUxk" 
+                class="dynmap-frame"
+                allowfullscreen
+            ></iframe>
+        </div>
+    </section>
+
+    <!-- قسم الرتب -->
+    <section class="ranks-section" id="ranks">
+        <div class="ranks-container cyber-card">
+            <h2 class="section-title"><i class="fas fa-crown"></i><span data-i18n="ranks"></span></h2>
+            <table class="ranks-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="rank"></th>
+                        <th data-i18n="price"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>VIP</td>
+                        <td>2,000 دينار</td>
+                    </tr>
+                    <tr>
+                        <td>MEGAVIP</td>
+                        <td>4,000 دينار</td>
+                    </tr>
+                    <tr>
+                        <td>VIP-PLUS</td>
+                        <td>6,000 دينار</td>
+                    </tr>
+                    <tr>
+                        <td>ULTRA-VIP</td>
+                        <td>8,000 دينار</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="payment-instructions">
+                <h3 data-i18n="payment_method"></h3>
+                <ol>
+                    <li data-i18n="step1"></li>
+                    <li data-i18n="step2"></li>
+                    <li data-i18n="step3"></li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
