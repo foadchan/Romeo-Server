@@ -25,7 +25,6 @@
             </div>
             <!-- أزرار التنقل -->
             <a href="#stats" class="nav-btn active" data-i18n="stats"></a>
-            <a href="#map" class="nav-btn" data-i18n="map"></a>
             <a href="#ranks" class="nav-btn" data-i18n="ranks"></a>
         </div>
     </nav>
@@ -42,19 +41,6 @@
                 <div class="stat-value" id="players-online">Error</div>
                 <div class="stat-subtext" id="players-max">/ </div>
             </div>
-
-            <!-- بطاقة الأداء -->
-            <div class="stat-card cyber-card">
-                <div class="stat-icon">
-                    <i class="fas fa-microchip"></i>
-                </div>
-                <h3 data-i18n="server_performance"></h3>
-                <div class="performance-bar">
-                    <div class="fill" id="performance-fill"></div>
-                </div>
-                <div class="stat-subtext" id="performance-text">Error</div>
-            </div>
-
             <!-- بطاقة الإصدار -->
             <div class="stat-card cyber-card">
                 <div class="stat-icon">
@@ -64,31 +50,8 @@
                 <div class="stat-value" id="server-version">Error</div>
                 <div class="stat-subtext" id="server-protocol">Error</div>
             </div>
-
-            <!-- بطاقة وقت التشغيل -->
-            <div class="stat-card cyber-card">
-                <div class="stat-icon">
-                    <i class="fas fa-clock"></i>
-                </div>
-                <h3 data-i18n="uptime"></h3>
-                <div class="stat-value" id="server-uptime">Error</div>
-                <div class="stat-subtext" id="server-status">غير متصل</div>
-            </div>
         </div>
     </section>
-
-    <!-- قسم الخريطة -->
-    <section class="map-section" id="map">
-        <div class="map-container cyber-card">
-            <h2 class="section-title"><i class="fas fa-globe-asia"></i><span data-i18n="map"></span></h2>
-            <iframe 
-                src="https://shorturl.at/UlUxk" 
-                class="dynmap-frame"
-                allowfullscreen
-            ></iframe>
-        </div>
-    </section>
-
     <!-- قسم الرتب -->
     <section class="ranks-section" id="ranks">
         <div class="ranks-container cyber-card">
